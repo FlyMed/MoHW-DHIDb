@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+
+<!-- Reset IE Compatible to Edge -->
+<meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1" />
+
+<!-- Basic Page Needs
+================================================== -->
+<meta charset="utf-8">
+<title>知識專區 | 中西藥交互作用資料庫</title>
+<meta name="description" content="DHIDb, also known as Drug Herb Interaction Database.">
+<meta name="author" content="Department of Chinese Medicine and Pharmacy | Ministry of Health and Welfare">
+<link rel="shortcut icon" href="favicon_16.ico"/>
+<link rel="bookmark" href="favicon_16.ico"/>
+
+<!-- Mobile Specific Metas
+================================================== -->
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<!-- CSS
+================================================== -->
+<link rel="stylesheet" href="css/style.css">
+
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+<!--[if lt IE 9]>
+  <script src="js/html5shiv.js"></script>
+  <script src="js/respond.min.js"></script>
+<![endif]-->
+
+<!-- JavaScript
+================================================== -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/typeahead.bundle.min.js"></script>
+<script type="text/javascript" src="js/footable.all.min.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+
+<!-- Facebook Open Graph Meta 預留到時候要套程式改 meta tag
+================================================== -->
+<meta property="og:url" content="/">
+<meta property="og:title" content="知識專區">
+<meta property="og:site_name" content="DHIDb | Department of Chinese Medicine and Pharmacy, MoHW"> 
+<meta property="og:description" content="DHIDb, also known as Drug Herb Interaction Database.">
+<meta property="og:image" content="#">
+<meta property="og:type" content="article">
+</head>
+
+<body>
+
+<!-- 主選單 / 開始 -->
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="index.html">中西藥交互作用資料庫</a>
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-main">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+		</div>
+		<!-- 功能選單 / 開始 -->
+		<div class="navbar-collapse collapse" id="navbar-main">
+			<ul class="nav navbar-nav">
+				<li class="dropdown">
+					<a href="#" id="interactions" class="dropdown-toggle" data-toggle="dropdown">交互作用 <span class="caret"></span></a>
+					<ul class="dropdown-menu" aria-labelledby="interactions">
+						<li><a href="checker.html">交互作用比對</a></li>
+						<li><a href="interactions.html">交互作用檢索</a></li>
+						<li><a href="#">藥物基本資料</a></li>
+					</ul>
+				</li>
+				<li class="dropdown active">
+					<a href="#" id="reference" class="dropdown-toggle" data-toggle="dropdown">參考資料 <span class="caret"></span></a>
+					<ul class="dropdown-menu" aria-labelledby="reference">
+						<li><a href="blog.html">知識專區</a></li>
+						<li><a href="#">參考文獻</a></li>
+					</ul>
+				</li>
+				<li class="dropdown">
+		    		<a href="#" id="others" class="dropdown-toggle" data-toggle="dropdown">其他資源 <span class="caret"></span></a>
+					<ul class="dropdown-menu" aria-labelledby="others">
+						<li><a href="links.html">相關網站</a></li>
+						<li><a href="#">問卷調查</a></li>
+						<li><a href="faq.html">常見問題</a></li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" id="about" class="dropdown-toggle" data-toggle="dropdown">關於本站 <span class="caret"></span></a>
+						<ul class="dropdown-menu" aria-labelledby="about">
+						<li><a href="#">簡介</a></li>
+						<li><a href="news.html">系統公告</a></li>
+						<li><a href="#">網站地圖</a></li>
+						<li><a href="contact.html">聯絡我們</a></li>
+					</ul>
+				</li>
+			</ul>
+			<!-- 功能選單 / 結束 -->
+			<!-- 會員功能 / 開始 -->
+			<ul class="nav navbar-nav navbar-right">
+				<!-- 未登入時顯示 / 開始 -->
+				<li>
+					<a href="login.html"><i class="fa fa-sign-in"></i> 登入</a>
+				</li>
+				<!-- 未登入時顯示 / 結束 -->
+				<!-- 登入後顯示 / 開始 -->
+				<li class="dropdown">
+					<a href="#" id="member" class="dropdown-toggle" data-toggle="dropdown">
+						<i class="fa fa-user"></i> 飛資得醫學 <span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu" aria-labelledby="member">
+						<li><a href="#"><i class="fa fa-gear fa-fw"></i> 帳號管理</a></li>
+						<li class="divider"></li>
+						<li><a href="#"><i class="fa fa-sign-out fa-fw"></i> 登出</a></li>
+					</ul>
+				</li>
+				<!-- 登入後顯示 / 結束 -->
+			</ul>
+			<!-- 會員功能 / 結束 -->
+        </div>
+    </div>
+</nav>
+<!-- 主選單 / 結束 -->
+
+<!-- Header / 開始 -->
+<header class="page-header">
+	<div class="container">
+		<h1><i class="fa fa-book"></i> 知識專區</h1>
+		<p>本專區匯集中西藥交互作用知識專文與國內外最新資訊，可作為醫事人員臨床或研究之參考。</p>
+	</div>
+</header>
+<!-- Header / 結束 -->
+
+<!-- Breadcrumb / 開始 -->
+<div class="container">
+
+	<ul class="breadcrumb">
+	  <li><a href="#">首頁</a></li>
+	  <li class="active">知識專區</li>
+	</ul>
+
+</div>
+<!-- Breadcrumb / 結束 -->
+
+<!-- 內容區 / 開始 -->
+<div class="container">
+
+	<!-- 知識專區內容 / 開始 -->
+	<div class="page-content portfolio">
+
+		<div class="row">
+
+			<!-- 文章區塊 / 開始 -->
+			<div class="col-sm-6 col-md-4">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<article class="post">
+							<figure class="post-img">
+								<a href="#">
+									<img src="img/blog.jpg" class="img-responsive" alt="">
+								</a>
+							</figure>
+							<h3>文章標題</h3>
+							<header class="meta">
+								<span>
+									<i class="fa fa-calendar fa-fw text-danger"></i> <time datetime='2014-11-01'>103-11-01</time>
+								</span>
+								<span>
+									<i class="fa fa-user fa-fw text-success"></i> 作者姓名
+								</span>
+								<span>
+									<i class="fa fa-tag fa-fw text-info"></i> 分類 1
+								</span>
+							</header>
+							<p>Maecenas dolor est, interdum a euismod eu, lorem accumsan posuere nisl. Nam sed iaculis massa. Sed nisl lectus, euismod quis, sollicitudin suspendisse dignissim bibendum.</p>
+						</article>
+						<a href="blog-post.html" class="btn btn-info btn-block">閱讀全文 <i class="fa fa-angle-double-right"></i></a>
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+			<!-- 文章區塊 / 結束 -->
+
+			<!-- 文章區塊 / 開始 -->
+			<div class="col-sm-6 col-md-4">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<article class="post">
+							<figure class="post-img">
+								<a href="#">
+									<img src="img/blog-2.jpg" class="img-responsive" alt="">
+								</a>
+							</figure>
+							<h3>文章標題</h3>
+							<header class="meta">
+								<span>
+									<i class="fa fa-calendar fa-fw text-danger"></i> <time datetime='2014-11-01'>103-11-01</time>
+								</span>
+								<span>
+									<i class="fa fa-user fa-fw text-success"></i> 作者姓名
+								</span>
+								<span>
+									<i class="fa fa-tag fa-fw text-info"></i> 分類 1
+								</span>
+							</header>
+							<p>Maecenas dolor est, interdum a euismod eu, lorem accumsan posuere nisl. Nam sed iaculis massa. Sed nisl lectus, euismod quis, sollicitudin suspendisse dignissim bibendum.</p>
+						</article>
+						<a href="blog-post.html" class="btn btn-info btn-block">閱讀全文 <i class="fa fa-angle-double-right"></i></a>
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+			<!-- 文章區塊 / 結束 -->
+
+			<!-- 文章區塊 / 開始 -->
+			<div class="col-sm-6 col-md-4">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<article class="post">
+							<figure class="post-img">
+								<a href="#">
+									<img src="img/blog-3.jpg" class="img-responsive" alt="">
+								</a>
+							</figure>
+							<h3>文章標題</h3>
+							<header class="meta">
+								<span>
+									<i class="fa fa-calendar fa-fw text-danger"></i> <time datetime='2014-11-01'>103-11-01</time>
+								</span>
+								<span>
+									<i class="fa fa-user fa-fw text-success"></i> 作者姓名
+								</span>
+								<span>
+									<i class="fa fa-tag fa-fw text-info"></i> 分類 1
+								</span>
+							</header>
+							<p>Maecenas dolor est, interdum a euismod eu, lorem accumsan posuere nisl. Nam sed iaculis massa. Sed nisl lectus, euismod quis, sollicitudin suspendisse dignissim bibendum.</p>
+						</article>
+						<a href="blog-post.html" class="btn btn-info btn-block">閱讀全文 <i class="fa fa-angle-double-right"></i></a>
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+			<!-- 文章區塊 / 結束 -->
+
+			<!-- 文章區塊 / 開始 -->
+			<div class="col-sm-6 col-md-4">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<article class="post">
+							<figure class="post-img">
+								<a href="#">
+									<img src="img/blog.jpg" class="img-responsive" alt="">
+								</a>
+							</figure>
+							<h3>文章標題</h3>
+							<header class="meta">
+								<span>
+									<i class="fa fa-calendar fa-fw text-danger"></i> <time datetime='2014-11-01'>103-11-01</time>
+								</span>
+								<span>
+									<i class="fa fa-user fa-fw text-success"></i> 作者姓名
+								</span>
+								<span>
+									<i class="fa fa-tag fa-fw text-info"></i> 分類 1
+								</span>
+							</header>
+							<p>Maecenas dolor est, interdum a euismod eu, lorem accumsan posuere nisl. Nam sed iaculis massa. Sed nisl lectus, euismod quis, sollicitudin suspendisse dignissim bibendum.</p>
+						</article>
+						<a href="blog-post.html" class="btn btn-info btn-block">閱讀全文 <i class="fa fa-angle-double-right"></i></a>
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+			<!-- 文章區塊 / 結束 -->
+
+			<!-- 文章區塊 / 開始 -->
+			<div class="col-sm-6 col-md-4">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<article class="post">
+							<figure class="post-img">
+								<a href="#">
+									<img src="img/blog-2.jpg" class="img-responsive" alt="">
+								</a>
+							</figure>
+							<h3>文章標題</h3>
+							<header class="meta">
+								<span>
+									<i class="fa fa-calendar fa-fw text-danger"></i> <time datetime='2014-11-01'>103-11-01</time>
+								</span>
+								<span>
+									<i class="fa fa-user fa-fw text-success"></i> 作者姓名
+								</span>
+								<span>
+									<i class="fa fa-tag fa-fw text-info"></i> 分類 1
+								</span>
+							</header>
+							<p>Maecenas dolor est, interdum a euismod eu, lorem accumsan posuere nisl. Nam sed iaculis massa. Sed nisl lectus, euismod quis, sollicitudin suspendisse dignissim bibendum.</p>
+						</article>
+						<a href="blog-post.html" class="btn btn-info btn-block">閱讀全文 <i class="fa fa-angle-double-right"></i></a>
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+			<!-- 文章區塊 / 結束 -->
+
+			<!-- 文章區塊 / 開始 -->
+			<div class="col-sm-6 col-md-4">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<article class="post">
+							<figure class="post-img">
+								<a href="#">
+									<img src="img/blog-3.jpg" class="img-responsive" alt="">
+								</a>
+							</figure>
+							<h3>文章標題</h3>
+							<header class="meta">
+								<span>
+									<i class="fa fa-calendar fa-fw text-danger"></i> <time datetime='2014-11-01'>103-11-01</time>
+								</span>
+								<span>
+									<i class="fa fa-user fa-fw text-success"></i> 作者姓名
+								</span>
+								<span>
+									<i class="fa fa-tag fa-fw text-info"></i> 分類 1
+								</span>
+							</header>
+							<p>Maecenas dolor est, interdum a euismod eu, lorem accumsan posuere nisl. Nam sed iaculis massa. Sed nisl lectus, euismod quis, sollicitudin suspendisse dignissim bibendum.</p>
+						</article>
+						<a href="blog-post.html" class="btn btn-info btn-block">閱讀全文 <i class="fa fa-angle-double-right"></i></a>
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+			<!-- 文章區塊 / 結束 -->
+			
+		</div>
+
+		<div class="row">
+
+			<!-- 分頁 -->
+			<div class="col-sm-12 text-center">
+				<ul class="pagination">
+					<li class="disabled"><a href="#">«</a></li>
+					<li class="active"><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">»</a></li>
+				</ul>
+			</div>
+
+		</div>
+
+	</div>
+	<!-- 知識專區內容 / 結束 -->
+
+</div>
+<!-- 內容區 / 結束 -->
+
+<!-- Footer / 開始 -->
+<div class="footer">
+
+	<!-- 容器 / 開始 -->
+	<div class="container">
+
+	    <div class="clearfix">
+
+	        <!-- Logo -->
+	        <div class="footer-logo">
+	        	<a href="#">中西藥交互作用資料庫</a>
+        	</div>
+
+	        <!-- Footer 區塊 1 / 開始 -->
+	        <dl class="footer-nav">
+	            <dt class="nav-title">交互作用</dt>
+	            <dd class="nav-item"><a href="#">交互作用比對</a></dd>
+	            <dd class="nav-item"><a href="#">交互作用檢索</a></dd>
+	            <dd class="nav-item"><a href="#">藥物基本資料</a></dd>
+	        </dl>
+	        <!-- Footer 區塊 4 / 結束 -->
+
+	        <!-- Footer 區塊 2 / 開始 -->
+	        <dl class="footer-nav">
+	            <dt class="nav-title">參考資料</dt>
+	            <dd class="nav-item"><a href="#">知識專區</a></dd>
+	            <dd class="nav-item"><a href="#">參考文獻</a></dd>
+	        </dl>
+	        <!-- Footer 區塊 4 / 結束 -->
+
+	        <!-- Footer 區塊 3 / 開始 -->
+	        <dl class="footer-nav">
+	            <dt class="nav-title">其他資源</dt>
+	            <dd class="nav-item"><a href="#">相關網站</a></dd>
+	            <dd class="nav-item"><a href="#">問卷調查</a></dd>
+	            <dd class="nav-item"><a href="#">常見問題</a></dd>
+	        </dl>
+	        <!-- Footer 區塊 4 / 結束 -->
+
+	        <!-- Footer 區塊 4 / 開始 -->
+	        <dl class="footer-nav">
+	            <dt class="nav-title">關於本站</dt>
+	            <dd class="nav-item"><a href="#">簡介</a></dd>
+	            <dd class="nav-item"><a href="#">網站地圖</a></dd>
+	            <dd class="nav-item"><a href="#">聯絡我們</a></dd>
+	        </dl>
+	        <!-- Footer 區塊 4 / 結束 -->
+
+	    </div>
+
+	    <!-- 版權宣告 -->
+	    <div class="footer-copyright text-center">&copy; 2014 <a href="http://www.mohw.gov.tw/cht/docmap/" target="_blank" title="衛生福利部中醫藥司" alt="衛生福利部中醫藥司">衛生福利部中醫藥司</a> All rights reserved.</div>
+
+	</div>
+    <!-- 容器 / 結束 -->
+
+</div>
+<!-- Footer / 結束 -->
+
+</body>
+</html>
