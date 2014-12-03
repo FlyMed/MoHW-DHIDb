@@ -13,6 +13,7 @@
 @import url("bootstrap.css");			/* Twitter Bootstrap 3.3.0 */
 @import url("typehead.css");            /* Twitter typeahead.js Fix */
 @import url("footable.core.min.css");   /* FooTable 2 */
+@import url("sweet-alert.css");         /* Sweet Alert */
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700");
 
 
@@ -138,23 +139,9 @@ table > tbody a:focus {
 
 /* #Pager
 ================================================== */
-.pager {
-    padding-left: 0;
-    margin: 20px 0;
-    list-style: none;
-    text-align: center;
-}
-
-.pager li {
-    display: inline;
-}
-
 .pager li > a, .pager li > span {
-    display: inline-block;
-    padding: 5px 14px;
     background-color: #ffffff;
     border: 1px solid #dddddd;
-    border-radius: 15px;
 }
 
 .pager li > a:hover, .pager li > a:focus {
@@ -162,18 +149,9 @@ table > tbody a:focus {
     background-color: #eeeeee;
 }
 
-.pager .next > a, .pager .next > span {
-    float: right;
-}
-
-.pager .previous > a, .pager .previous > span {
-    float: left;
-}
-
 .pager .disabled > a, .pager .disabled > a:hover, .pager .disabled > a:focus, .pager .disabled > span {
     color: #999999;
     background-color: #ffffff;
-    cursor: not-allowed;
 }
 
 
@@ -311,7 +289,12 @@ table.blog-list > tbody {
     }
 }
 
+.post {
+    margin-bottom: 21px;
+}
+
 .post-img {
+    margin-top: 21px;
     border: 1px solid #ecf0f1;
 }
 
@@ -319,8 +302,21 @@ table.blog-list > tbody {
     margin-bottom: 21px;
 }
 
-h3.post-category {
+
+/* =================================================================== */
+/* Well
+====================================================================== */
+
+.well.widget {
+    margin-top: 21px;
+}
+
+.well.widget > h3 {
     margin-top: 0;
+}
+
+.well.widget p {
+    margin: 0;
 }
 
 
@@ -492,7 +488,7 @@ table.interaction-detail td {
 ====================================*/
 .meta {
     color: #888;
-    margin: 0 0 15px 0;
+    margin: 0 0 21px 0;
 }
 
 .meta a {

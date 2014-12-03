@@ -8,7 +8,7 @@
 <!-- Basic Page Needs
 ================================================== -->
 <meta charset="utf-8">
-<title>常見問題 | 中西藥交互作用資料庫</title>
+<title>公告標題 - 系統公告 | 中西藥交互作用資料庫</title>
 <meta name="description" content="DHIDb, also known as Drug Herb Interaction Database.">
 <meta name="author" content="Department of Chinese Medicine and Pharmacy | Ministry of Health and Welfare">
 <link rel="shortcut icon" href="favicon_16.ico"/>
@@ -34,12 +34,13 @@
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/typeahead.bundle.min.js"></script>
 <script type="text/javascript" src="js/footable.all.min.js"></script>
+<script type="text/javascript" src="js/sweet-alert.min.js"></script>
 <script type="text/javascript" src="js/custom.js"></script>
 
 <!-- Facebook Open Graph Meta 預留到時候要套程式改 meta tag
 ================================================== -->
 <meta property="og:url" content="/">
-<meta property="og:title" content="常見問題">
+<meta property="og:title" content="公告標題">
 <meta property="og:site_name" content="DHIDb | Department of Chinese Medicine and Pharmacy, MoHW"> 
 <meta property="og:description" content="DHIDb, also known as Drug Herb Interaction Database.">
 <meta property="og:image" content="#">
@@ -90,7 +91,7 @@
 					<a href="#" id="about" class="dropdown-toggle" data-toggle="dropdown">關於本站 <span class="caret"></span></a>
 						<ul class="dropdown-menu" aria-labelledby="about">
 						<li><a href="#">簡介</a></li>
-						<li><a href="news.html">系統公告</a></li>
+						<li class="active"><a href="news.html">系統公告</a></li>
 						<li><a href="#">網站地圖</a></li>
 						<li><a href="contact.html">聯絡我們</a></li>
 					</ul>
@@ -126,8 +127,8 @@
 <!-- Header / 開始 -->
 <header class="page-header">
 	<div class="container">
-		<h1><i class="fa fa-question-circle"></i> 常見問題</h1>
-		<p>若您在使用本系統時有疑問，請您參考本頁面資訊。</p>
+		<h1><i class="fa fa-bullhorn"></i> 系統公告</h1>
+		<p>本系統各項重要公告資訊將不定期發布，請務必留意。</p>
 	</div>
 </header>
 <!-- Header / 結束 -->
@@ -137,7 +138,8 @@
 
 	<ul class="breadcrumb">
 	  <li><a href="#">首頁</a></li>
-	  <li class="active">常見問題</li>
+	  <li><a href="#">系統公告</a></li>
+	  <li class="active">公告標題</li>
 	</ul>
 
 </div>
@@ -146,7 +148,7 @@
 <!-- 內容區 / 開始 -->
 <div class="container">
 
-	<!-- 系統內容 / 開始 -->
+	<!-- 知識專區內容 / 開始 -->
 	<div class="page-content">
 
 		<div class="row">
@@ -154,71 +156,53 @@
 			<!-- 左側 / 開始 -->
 			<div class="col-sm-8">
 
-				<!-- 常見問題 / 開始 -->
-				<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-				  <div class="panel panel-default">
-				    <div class="panel-heading" role="tab" id="headingOne">
-				      <h4 class="panel-title">
-				        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-				          問題 #1
-				        </a>
-				      </h4>
-				    </div>
-				    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-				      <div class="panel-body">
-				        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui inventore, eaque cum tenetur necessitatibus doloribus accusamus ducimus. Et iste obcaecati, voluptatem molestiae dignissimos, officia reprehenderit numquam ipsam quia maxime, atque!
-				      </div>
-				    </div>
-				  </div>
-				  <div class="panel panel-default">
-				    <div class="panel-heading" role="tab" id="headingTwo">
-				      <h4 class="panel-title">
-				        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-				          問題 #2
-				        </a>
-				      </h4>
-				    </div>
-				    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-				      <div class="panel-body">
-				        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi modi assumenda, tempore quisquam quos nisi commodi voluptatum totam sint voluptatem. Neque inventore commodi aliquam sapiente quo sunt temporibus consequuntur cupiditate!
-				      </div>
-				    </div>
-				  </div>
-				  <div class="panel panel-default">
-				    <div class="panel-heading" role="tab" id="headingThree">
-				      <h4 class="panel-title">
-				        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-				          問題 #3
-				        </a>
-				      </h4>
-				    </div>
-				    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-				      <div class="panel-body">
-				        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis itaque necessitatibus, nesciunt quisquam, ad excepturi corporis laboriosam rerum deleniti amet eius minus ratione tenetur officia! Illum quam, ut quibusdam fugit.
-				      </div>
-				    </div>
-				  </div>
-				</div>
-				<!-- 常見問題 / 結束 -->
+				<!-- 文章區塊 -->
+				<article class="post">
+					<h2>公告標題</h2>
+					<header class="meta">
+						<span>
+							<i class="fa fa-calendar fa-fw text-danger"></i> <time datetime='2014-11-01'>103-11-01</time>
+						</span>
+						<span>
+							<i class="fa fa-user fa-fw text-success"></i> 作者姓名
+						</span>
+						<span>
+							<i class="fa fa-eye fa-fw text-warning"></i> 1054
+						</span>
+					</header>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure incidunt ipsam pariatur omnis consequuntur, dolor fuga a dolorem! Architecto, error ab explicabo natus quis provident dolore officia consequatur expedita libero.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur similique sequi, doloribus rerum voluptate, in, ipsa minus ea officia quis facere ut. Architecto natus culpa et nihil illum eos, adipisci.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit ipsum dolor labore, reprehenderit repellat dicta, alias harum explicabo quibusdam ab quia! Rem sequi esse obcaecati sint aspernatur id voluptatem iste!</p>
+				</article>
 
+				<hr class="dashed">
+
+				<!-- 分頁 -->
+				<div class="text-center">
+					<ul class="pager">
+						<li class="previous disabled"><a href="#"><i class="fa fa-chevron-left"></i> 較舊公告</a></li>
+						<li class="next"><a href="#">較新公告 <i class="fa fa-chevron-right"></i></a></li>
+					</ul>
+				</div>
 			</div>
 			<!-- 左側 / 結束 -->
 
 			<!-- 右側 / 開始 -->
 			<div class="col-sm-4">
 
+				<!-- 其他資源 -->
 				<div class="well widget">
 					<h3><i class="fa fa-info-circle"></i> 其他資源</h3>
-					<p>若您對於本系統使用操作有疑問，您也可以參考<a href="#" title="下載使用手冊" alt="下載使用手冊">使用手冊</a>。</p>
+					<p>若您對於本系統使用操作有疑問，請您在與我們聯繫前先參考<a href="#" title="常見問題" alt="常見問題">常見問題</a>，或下載<a href="#" title="下載使用手冊" alt="下載使用手冊">使用手冊</a>。</p>
 				</div>
 
 			</div>
 			<!-- 右側 / 結束 -->
-
+			
 		</div>
 
 	</div>
-	<!-- 系統公告內容 / 結束 -->
+	<!-- 知識專區內容 / 結束 -->
 
 </div>
 <!-- 內容區 / 結束 -->
