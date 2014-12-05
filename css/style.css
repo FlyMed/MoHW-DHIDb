@@ -155,6 +155,21 @@ table > tbody a:focus {
 }
 
 
+/* #Well
+================================================== */
+.well.widget {
+    margin-top: 21px;
+}
+
+.well.widget > h3 {
+    margin-top: 0;
+}
+
+.well.widget p {
+    margin: 0;
+}
+
+
 /* =================================================================== */
 /* Sections
 ====================================================================== */
@@ -226,104 +241,19 @@ table > tbody a:focus {
 
 
 /* =================================================================== */
-/* News
+/* Custom
 ====================================================================== */
 
-table.news-list > thead {
-    border-bottom: 1px solid #ddd;
-}
-
-table.news-list > tbody > tr > td {
-    line-height: 2.5;
-}
-
-table.news-list > tbody {
-    border-bottom: 1px solid #ddd; 
-}
-
-.news-list-date {
-    width: 110px;
-    text-align: center;
-}
-
-#news-search {
-    margin-bottom: 21px;
-}
-
-
-/* =================================================================== */
-/* Blog
-====================================================================== */
-
-table.blog-list > thead {
-    border-bottom: 1px solid #ddd;
-}
-
-table.blog-list > tbody > tr > td {
-    line-height: 2.5;
-}
-
-table.blog-list > tbody {
-    border-bottom: 1px solid #ddd; 
-}
-
-.blog-list-date,
-.blog-list-category {
-    width: 110px;
-    text-align: center;
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-    .portfolio .row > .clear:nth-child(4n)::before {
-      content: '';
-      display: table;
-      clear: both;
-    }
-}
-
-@media (min-width: 992px) {
-    .portfolio .row > .clear:nth-child(6n)::before {  
-      content: '';
-      display: table;
-      clear: both;
-    }
-}
-
-.post {
-    margin-bottom: 21px;
-}
-
-.post-img {
+/* #Homepage
+================================================== */
+.home .panel {
     margin-top: 21px;
-    border: 1px solid #ecf0f1;
-}
-
-.post-widget {
-    margin-bottom: 21px;
+    margin-bottom: 42px;
 }
 
 
-/* =================================================================== */
-/* Well
-====================================================================== */
-
-.well.widget {
-    margin-top: 21px;
-}
-
-.well.widget > h3 {
-    margin-top: 0;
-}
-
-.well.widget p {
-    margin: 0;
-}
-
-
-/* =================================================================== */
-/* Interaction Checker & Report
-====================================================================== */
-
+/* #Interaction Checker & Report
+================================================== */
 table.checker-list > thead,
 table.checker-report-list > thead > tr > th {
     border-bottom: 2px solid #ddd;
@@ -397,10 +327,8 @@ table.checker-report-list > tbody > tr > td {
 }
 
 
-/* =================================================================== */
-/* Interaction Detail
-====================================================================== */
-
+/* #Interaction Detail
+================================================== */
 table.interaction-detail td {
     vertical-align: middle !important;
 }
@@ -408,6 +336,87 @@ table.interaction-detail td {
 .interaction-drug {
     font-size: 26px;
     font-weight: 400;
+}
+
+
+/* #News
+================================================== */
+table.news-list > thead {
+    border-bottom: 1px solid #ddd;
+}
+
+table.news-list > tbody > tr > td {
+    line-height: 2.5;
+}
+
+table.news-list > tbody {
+    border-bottom: 1px solid #ddd; 
+}
+
+.news-list-date {
+    width: 110px;
+    text-align: center;
+}
+
+#news-search {
+    margin-bottom: 21px;
+}
+
+
+/* #Blog
+================================================== */
+table.blog-list > thead {
+    border-bottom: 1px solid #ddd;
+}
+
+table.blog-list > tbody > tr > td {
+    line-height: 2.5;
+}
+
+table.blog-list > tbody {
+    border-bottom: 1px solid #ddd; 
+}
+
+.blog-list-date,
+.blog-list-category {
+    width: 110px;
+    text-align: center;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .portfolio .row > .clear:nth-child(4n)::before {
+      content: '';
+      display: table;
+      clear: both;
+    }
+}
+
+@media (min-width: 992px) {
+    .portfolio .row > .clear:nth-child(6n)::before {  
+      content: '';
+      display: table;
+      clear: both;
+    }
+}
+
+.post {
+    margin-bottom: 21px;
+}
+
+.post-img {
+    margin-top: 21px;
+    border: 1px solid #ecf0f1;
+}
+
+.post-widget {
+    margin-bottom: 21px;
+}
+
+
+/* #Links
+================================================== */
+.links-list {
+    margin-top: 21px;
 }
 
 
