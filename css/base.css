@@ -77,3 +77,14 @@ input[type="text"], input[type="password"], input[type="email"], textarea, selec
 .vcenter {
     vertical-align: middle !important;
 }
+
+
+/* #Lists
+================================================== */
+ul, ol { margin: 0; }
+ul { list-style: none outside; }
+ol { list-style: decimal; }
+ol, ul.square, ul.circle, ul.disc { margin-left: 30px; }
+ul.square { list-style: square outside; }
+ul.circle { list-style: circle outside; }
+ul.disc { list-style: disc outside; }

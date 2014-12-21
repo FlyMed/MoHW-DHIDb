@@ -25,6 +25,7 @@
 ================================================== */
 body { font-size: 16px; }
 
+
 /* #Links
 ================================================== */
 a,
@@ -53,6 +54,12 @@ table > tbody a:hover,
 table > tbody a:focus {
     color: #3498db;
 }
+
+
+/* #Accordion
+================================================== */
+.panel-heading { cursor: pointer; }
+
 
 /* #Pagination
 ================================================== */
@@ -142,6 +149,7 @@ table > tbody a:focus {
     border-bottom-right-radius: 3px;
     border-top-right-radius: 3px;
 }
+
 
 /* #Pager
 ================================================== */
@@ -359,19 +367,17 @@ table.interaction-detail td {
 }
 
 
+/* #Herb Detail
+================================================== */
+.herb-img     { margin-top: 21px; }
+.herb-img img { border: 1px solid #ecf0f1; }
+
+
 /* #News
 ================================================== */
-table.news-list > thead {
-    border-bottom: 1px solid #ddd;
-}
-
-table.news-list > tbody > tr > td {
-    line-height: 2.5;
-}
-
-table.news-list > tbody {
-    border-bottom: 1px solid #ddd; 
-}
+table.news-list > thead { border-bottom: 1px solid #ddd; }
+table.news-list > tbody { border-bottom: 1px solid #ddd; }
+table.news-list > tbody > tr > td { line-height: 2.5; }
 
 .news-list-date {
     width: 110px;
@@ -385,17 +391,9 @@ table.news-list > tbody {
 
 /* #Blog
 ================================================== */
-table.blog-list > thead {
-    border-bottom: 1px solid #ddd;
-}
-
-table.blog-list > tbody > tr > td {
-    line-height: 2.5;
-}
-
-table.blog-list > tbody {
-    border-bottom: 1px solid #ddd; 
-}
+table.blog-list > thead { border-bottom: 1px solid #ddd; }
+table.blog-list > tbody { border-bottom: 1px solid #ddd; }
+table.blog-list > tbody > tr > td { line-height: 2.5; }
 
 .blog-list-date,
 .blog-list-category {
@@ -419,29 +417,16 @@ table.blog-list > tbody {
     }
 }
 
-.post {
-    margin-bottom: 21px;
-}
-
-.post-img {
-    margin-top: 21px;
-    border: 1px solid #ecf0f1;
-}
-
-.page-content .post-img {
-    margin-top: 0;
-}
-
-.post-widget {
-    margin-bottom: 21px;
-}
+.post            { margin-bottom: 21px; }
+.post-img        { margin-top: 21px; }
+.post-img img    { border: 1px solid #ecf0f1; }
+.panel .post-img { margin-top: 0; }
+.post-widget     { margin-bottom: 21px; }
 
 
 /* #Links
 ================================================== */
-.links-list {
-    margin-top: 21px;
-}
+.links-list { margin-top: 21px; }
 
 
 /* =================================================================== */
